@@ -39,5 +39,6 @@ class Triangle
     #   if
     # end
 
+    end
   end
 end
