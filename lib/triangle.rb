@@ -12,10 +12,10 @@ class Triangle
 #returns, as a symbol, its type. The valid types are :equilateral :isosceles :scalene
   def kind
     #if one + two + three != 180
-    begin
-    raise error
-  rescue
-  end
+  #   begin
+  #   raise error
+  # rescue
+  # end
 
   end
 
