@@ -8,7 +8,7 @@ class Triangle
 
 #should raise a custom error, TriangleError if the triangle is invalid
 #returns, as a symbol, its type. The valid types are :equilateral :isosceles :scalene
-  def kind 
+  def kind
     #if one + two + three != 180
     begin
     raise error
