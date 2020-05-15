@@ -8,22 +8,17 @@ class Triangle
     @side_3 = side_3
   end
 
-#returns, as a symbol, its type. The valid types are :equilateral :isosceles :scalene
-#scalene - has no equal sides
-#isosceles - has two equal sides
-#equilateral - three equal sides
-
-#should raise a custom error, TriangleError if the triangle is invalid
 #The sum of the lengths of any two sides of a triangle always exceeds the length of the third side
   def valid?
-    [@side_1, @side_2, @side_3].all? {|side| side >0} #triangles violating triangle inequality are illegal
-
+    sides = [@side_1, @side_2, @side_3]
+    sides.all? {|side| side >0}
+    
+    (@side_1 + @side_2 > @side_3) || (@side_1 + @side_3 > @side_2) 
   end
 
   def kind
     if !valid?
       raise TriangleError
-
     elsif
       (@side_1 == @side_2) && (@side_2 == @side_3)
       :equilateral
@@ -34,7 +29,6 @@ class Triangle
       (@side_1 != @side_2) && (@side_2 != @side_3)
       :scalene
     else
-  #
     end
   end
 
