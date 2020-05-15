@@ -22,11 +22,8 @@ class Triangle
 
   def kind
     if !valid?
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
+      raise TriangleError
+    
     elsif
       (@side_1 == @side_2) && (@side_2 == @side_3)
       :equilateral
