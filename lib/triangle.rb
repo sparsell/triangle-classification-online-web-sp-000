@@ -15,7 +15,7 @@ class Triangle
 
 #should raise a custom error, TriangleError if the triangle is invalid
   def kind
-    if side_1 + side_2 + side_3 != 180 #triangles violating triangle inequality are illegal
+    if (side_1 + side_2 + side_3) != 180 #triangles violating triangle inequality are illegal
       begin
         raise TriangleError
       rescue TriangleError => error
