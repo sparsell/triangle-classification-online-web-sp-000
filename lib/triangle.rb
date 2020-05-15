@@ -15,20 +15,20 @@ class Triangle
 
 #should raise a custom error, TriangleError if the triangle is invalid
   def kind
-    if (side_1 + side_2 + side_3) != 180 #triangles violating triangle inequality are illegal
+    if (@side_1 + @side_2 + @side_3) != 180 #triangles violating triangle inequality are illegal
       begin
         raise TriangleError
       rescue TriangleError => error
         puts error.message
       end
     elsif
-      (side_1 == side_2) && (side_2 == side_3)
+      (@side_1 == @side_2) && (@side_2 == @side_3)
       :equilateral
     elsif
-      (side_1 == side_2) && (side_3 < side_1)
+      (@side_1 == @side_2) && (@side_3 < @side_1)
       :isosceles
     elsif
-      (side_1 != side_2) && (side_2 != side_3)
+      (@side_1 != @side_2) && (@side_2 != @side_3)
       :scalene
     else
   #
