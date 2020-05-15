@@ -8,10 +8,14 @@ class Triangle
     @side_3 = side_3
   end
 
-#should raise a custom error, TriangleError if the triangle is invalid
 #returns, as a symbol, its type. The valid types are :equilateral :isosceles :scalene
+#scalene - has no equal sides: side_1 != side_2 && side_1 !== side_3 && side_2 !== side_3
+#isosceles - has two equal sides
+#equilateral - three equal sides
+
+#should raise a custom error, TriangleError if the triangle is invalid
   def kind
-    if one + two + three != 180
+    if side_1 + side_2 + side_3 != 180
       raise TriangleError
     elsif
       (side_1 == side_2) && (side_2 == side_3)
@@ -33,9 +37,7 @@ class Triangle
   class TriangleError < StandardError
     def message
 
-      #scalene - has no equal sides: side_1 != side_2 && side_1 !== side_3 && side_2 !== side_3
-      #isosceles - has two equal sides
-      #equilateral - three equal sides
+      
     #   if
     # end
 
