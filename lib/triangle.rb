@@ -11,7 +11,12 @@ class Triangle
 #should raise a custom error, TriangleError if the triangle is invalid
 #returns, as a symbol, its type. The valid types are :equilateral :isosceles :scalene
   def kind
-    #if one + two + three != 180
+    if one + two + three != 180
+      raise TriangleError
+    elsif (side_1 == side_2) && (side_2 == side_3)
+      return :equilateral
+    elsif (side_1 == side_2) && (side_3 < side_1)
+      return :isosceles
   #   begin
   #   raise error
   # rescue
