@@ -12,8 +12,8 @@ class Triangle
   def valid?
     sides = [@side_1, @side_2, @side_3]
     sides.all? {|side| side >0}
-    
-    (@side_1 + @side_2 > @side_3) || (@side_1 + @side_3 > @side_2) 
+
+    (@side_1 + @side_2 > @side_3) || (@side_1 + @side_3 > @side_2)
   end
 
   def kind
