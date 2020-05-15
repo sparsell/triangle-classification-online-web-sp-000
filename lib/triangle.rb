@@ -18,7 +18,7 @@ class Triangle
   def valid
     if si
       if (@side_1 + @side_2 + @side_3) != 180 #triangles violating triangle inequality are illegal
-        
+
   end
 
   def kind
