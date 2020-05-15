@@ -13,13 +13,13 @@ class Triangle
   def kind
     if one + two + three != 180
       raise TriangleError
-    elsif 
+    elsif
       (side_1 == side_2) && (side_2 == side_3)
       :equilateral
-    elsif 
+    elsif
       (side_1 == side_2) && (side_3 < side_1)
       :isosceles
-    elsif 
+    elsif
       (side_1 !== side_2) && (side_2 !== side_3)
       :scalene
   #   begin
