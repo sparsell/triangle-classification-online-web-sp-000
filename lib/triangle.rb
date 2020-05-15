@@ -15,7 +15,7 @@ class Triangle
 
 #should raise a custom error, TriangleError if the triangle is invalid
 #The sum of the lengths of any two sides of a triangle always exceeds the length of the third side
-  def valid
+  def valid?
     [@side_1, @side_2, @side_3].all {|side| side >0} #triangles violating triangle inequality are illegal
 
   end
