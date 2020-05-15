@@ -17,7 +17,7 @@ class Triangle
 #The sum of the lengths of any two sides of a triangle always exceeds the length of the third side
   def valid
     if si
-      if (@side_1 + @side_2 + @side_3) != 180 #triangles violating triangle inequality are illegal
+      if []@side_1, @side_2, @side_3].all {|side| side >0} #triangles violating triangle inequality are illegal
 
   end
 
