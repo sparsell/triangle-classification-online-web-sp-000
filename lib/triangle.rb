@@ -11,9 +11,8 @@ class Triangle
 #The sum of the lengths of any two sides of a triangle always exceeds the length of the third side
   def valid?
     sides = [@side_1, @side_2, @side_3]
-    sides.all? {|side| side >0}
-
-    #(@side_1 + @side_2 > @side_3) || (@side_1 + @side_3 > @side_2)
+    value_test = sides.all? {|side| side >0}
+    (@side_1 + @side_2 > @side_3) || (@side_1 + @side_3 > @side_2)
   end
 
   def kind
