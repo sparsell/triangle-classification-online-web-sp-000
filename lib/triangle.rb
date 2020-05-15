@@ -2,7 +2,7 @@
 
 class Triangle
 
-  def initialize(one, two, three)
+  def initialize(side_1, side_2, side3)
 
   end
 
