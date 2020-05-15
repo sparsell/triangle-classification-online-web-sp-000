@@ -22,6 +22,7 @@ class Triangle
     elsif
       (side_1 !== side_2) && (side_2 !== side_3)
       :scalene
+    else
   #   begin
   #   raise error
   # rescue
