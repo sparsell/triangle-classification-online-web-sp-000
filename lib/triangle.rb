@@ -16,7 +16,11 @@ class Triangle
 #should raise a custom error, TriangleError if the triangle is invalid
   def kind
     if side_1 + side_2 + side_3 != 180 #triangles violating triangle inequality are illegal
-      raise TriangleError
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end
     elsif
       (side_1 == side_2) && (side_2 == side_3)
       :equilateral
@@ -27,15 +31,13 @@ class Triangle
       (side_1 != side_2) && (side_2 != side_3)
       :scalene
     else
-  #   begin
-  #   raise error
-  # rescue
-  # end
+  #
     end
   end
 
   class TriangleError < StandardError
     def message
+
 
 
     #   if
