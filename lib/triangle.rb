@@ -26,7 +26,7 @@ class Triangle
   #   raise error
   # rescue
   # end
-
+    end
   end
 
   class TriangleError < StandardError
